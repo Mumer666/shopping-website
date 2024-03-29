@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return ( 
     <>
-      <NavBar />
+      <h1>hello world</h1>
     </>
    );
 }
