@@ -12,9 +12,10 @@ const CartReducer = (state, action) => {
                 image: singleProduct.image[0].url,
 
             }
+            console.log(cartDetails)
             return {
                 ...state,
-                cart: [...state, cartDetails],
+                cart: [...state.cart, cartDetails],
             }
         case "clear_cart_item":
             let id = action.payload;
