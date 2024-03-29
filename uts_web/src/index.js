@@ -1,13 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./Amazon_Clone/App";
+import AppProvider from "./Amazon_Clone/Context/productContext";
+import FilterProductContext from "./Amazon_Clone/Context/filterProductContext";
+import CartProvider from "./Amazon_Clone/Context/CartProductContext";
+//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <AppProvider>
+        <FilterProductContext>
+          <CartProvider>
+            <App/>
+          </CartProvider>
+        </FilterProductContext>
+      </AppProvider>
+    </BrowserRouter>
+    ,
   </React.StrictMode>
 );
 
