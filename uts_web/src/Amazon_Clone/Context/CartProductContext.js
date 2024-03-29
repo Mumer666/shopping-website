@@ -25,6 +25,7 @@ const CartProvider = ({children}) => {
 
     useEffect(() => {
         dispatch({type:"total_bill"})
+        console.log("i am changing")
         localStorage.setItem("data" , JSON.stringify(state.cart))
     } , [state.cart])
 
