@@ -23,9 +23,10 @@ function Cart() {
                         <hr className='mb-2' style={{height:"1px", width:"100%",color:"#333",background:"#333"}}/>
                         <div>
                             {
-                                cart.map((curElem) => {
+                                
+                                cart ? (cart.map((curElem) => {
                                     return <SingleCartItem key={curElem.id} cartData={curElem} />
-                                })
+                                })): null
                             }
                         </div>
                         <hr className='mt-3' style={{height:"1px", width:"100%",color:"#333",background:"#333"}}/>
