@@ -14,7 +14,7 @@ const CartReducer = (state, action) => {
             }
             return {
                 ...state,
-                cart: [...state.cart, cartDetails],
+                cart: [...state, cartDetails],
             }
         case "clear_cart_item":
             let id = action.payload;
