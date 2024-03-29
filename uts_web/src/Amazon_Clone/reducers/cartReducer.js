@@ -12,7 +12,6 @@ const CartReducer = (state, action) => {
                 image: singleProduct.image[0].url,
 
             }
-            console.log(cartDetails)
             return {
                 ...state,
                 cart: [...state.cart, cartDetails],

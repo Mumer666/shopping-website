@@ -22,7 +22,7 @@ const CartProvider = ({children}) => {
     const sendCartData = (colour , quantity , singleProduct) => {
         dispatch({type:"add_cart_data" , payload:{colour,quantity,singleProduct}})
     }
-
+    console.log(state.cart)
     useEffect(() => {
         dispatch({type:"total_bill"})
         console.log("i am changing")
