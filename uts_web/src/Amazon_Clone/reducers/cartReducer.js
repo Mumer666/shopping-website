@@ -32,7 +32,7 @@ const CartReducer = (state, action) => {
             }
         case "total_bill":
             let initialBill = 0;
-            if (state != null) {
+            if (state.cart != null) {
                 let totalBill = state.cart.map((curElem) => {
                     return initialBill = initialBill + (curElem.price * curElem.quantity)
                 })
